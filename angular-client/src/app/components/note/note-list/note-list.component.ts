@@ -24,6 +24,7 @@ export class NoteListComponent implements OnInit {
   ngOnInit() {
 
     this.getNotes();
+    this.setActive();
 
   }
 
@@ -71,6 +72,12 @@ export class NoteListComponent implements OnInit {
     this.router.navigate(['/edit']);
     this.noteService.saveId(id);
 
+  }
+
+  setActive(){
+    document.getElementById('notesLink').classList.add('active');
+    document.getElementById('addLink').classList.remove('active');
+    document.getElementById('archivedLink').classList.remove('active');
   }
 
 }

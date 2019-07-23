@@ -44,6 +44,8 @@ public class ArchivedNoteController {
 
     @GetMapping("/getAllArchived")
     public List<ArchivedNote> getAllArchived(){
+
         return archiveService.getAll();
+
     }
 }

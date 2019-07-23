@@ -1,7 +1,6 @@
 package me.mohammedriazkhan.note.controller;
-import me.mohammedriazkhan.note.domain.ArchivedNote;
+
 import me.mohammedriazkhan.note.domain.Note;
-import me.mohammedriazkhan.note.service.ArchiveService;
 import me.mohammedriazkhan.note.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,8 +14,6 @@ public class NoteController {
 
     @Autowired
     private NoteService service;
-
-
 
     @PostMapping("/add")
     public void addNote(@RequestBody Note note){
@@ -48,12 +45,9 @@ public class NoteController {
 
     @GetMapping("/getAll")
     public List<Note> getAll(){
+
         return service.getAll();
+
     }
-
-
-
-
-
 
 }

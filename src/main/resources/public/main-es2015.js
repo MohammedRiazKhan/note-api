@@ -674,6 +674,7 @@ let NoteListComponent = class NoteListComponent {
     }
     ngOnInit() {
         this.getNotes();
+        this.setActive();
     }
     getNotes() {
         this.noteService.getAll().subscribe(data => {
@@ -702,6 +703,11 @@ let NoteListComponent = class NoteListComponent {
     editNote(id) {
         this.router.navigate(['/edit']);
         this.noteService.saveId(id);
+    }
+    setActive() {
+        document.getElementById('notesLink').classList.add('active');
+        document.getElementById('addLink').classList.remove('active');
+        document.getElementById('archivedLink').classList.remove('active');
     }
 };
 NoteListComponent.ctorParameters = () => [
@@ -1047,7 +1053,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/E8EC8E7DEC8E4632/Projects/NoteApp/angular-client/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\mkkhanox\IdeaProjects\Note\angular-client\src\main.ts */"./src/main.ts");
 
 
 /***/ })

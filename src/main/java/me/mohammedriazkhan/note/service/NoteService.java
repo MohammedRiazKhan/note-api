@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-
 @org.springframework.stereotype.Service
 public class NoteService implements Service<Note, Integer>{
 
